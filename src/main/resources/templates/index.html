@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio - Felipe Rafael Niendicker</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="/css/style.css" />
   </head>
   <body>
     <header>
       <div class="container">
-        <h1>Felipe Rafael Niendicker</h1>
-        <p>Estudante de Sistemas de Informação</p>
+        <h1 th:text="${nome}">Felipe Rafael Niendicker</h1>
+        <p th:text="${curso}">Estudante de Sistemas de Informação</p>
       </div>
     </header>
 
@@ -26,7 +26,7 @@
     <main class="container">
       <section id="inicio">
         <h2>Olá, eu sou Felipe Rafael Niendicker</h2>
-        <p>
+        <p th:text="${mensagem}">
           Sou estudante de Sistemas de Informação e tenho interesse em
           desenvolvimento de sistemas e desenvolvimento web.
         </p>
